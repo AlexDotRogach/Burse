@@ -1,0 +1,109 @@
+.question
+    background: linear-gradient(3.09deg, #FFFFFF 9.74%, #F8F7FD 84.33%)
+    backdrop-filter: blur(6.5px)
+    padding: 0 10px 0 10px
+    &__title
+        padding-top: 50px
+        padding-bottom: 37px
+        text-align: center
+        font-family: FFGoodPro-Medium
+        font-size: 27px
+        color: #272727
+    svg
+        width: 15px
+        height: 15px
+        fill: #A0C0D9
+
+    &__control
+        @include flexSpacBet
+        width: 100px
+        margin: 40px auto
+        &-item
+            border-radius: 50%
+            background: #D4DFF8
+            width: 10px
+            height: 10px
+            &:hover
+                cursor: pointer
+        &-item_active
+            background: #658AE5
+// slider
+.card
+    display: grid
+    grid-template: 112px 54px repeat(4, 28px) 70px/ 1fr 1fr
+    row-gap: 15px
+    background: #FFFFFF
+    box-shadow: -9px 9px 54px rgba(74, 85, 126, 0.1)
+    border-radius: 18px
+    overflow: hidden
+    padding-bottom: 25px
+    &__title
+        grid-column: 1 / 3
+        display: flex
+        &-img-logo
+            border: 9px solid #FAFAFD
+            border-radius: 50%
+            box-shadow: inset -1px -2px 23px rgba(99, 106, 126, 0.1)
+            transform: translate(-8.5px, -5px)
+        &-info
+            @include flexColumn
+            align-items: start
+        &-name
+            font-size: 22px
+            color: #262626
+            font-family: FFGoodPro-Medium
+        &-type
+            display: flex
+            font-size: 16px
+            color: #262626
+            margin-top: 15px
+        &-achiev
+            background: url("../img/achiev.png") no-repeat
+            width: 20px
+            height: 20px
+        &-text
+            color: #262626
+            font-family: FFGoodPro-Light
+        &-text-type
+            font-family: FFGoodPro-Regular
+    &__info, &__format, &__experience, &__graduates, &__year, &__button_yel
+        grid-column: 1 / 3
+    &__info
+        font-family: FFGoodPro-Light
+        color: #464646
+        text-align: center
+        font-size: 16px
+    &__format, &__experience, &__graduates, &__year
+        @include flexSpacBet
+        padding: 0 20px
+        font-size: 16px
+    &__experience, &__graduates, &__year
+        font-family: FFGoodPro-Light
+        svg
+            margin-right: 8px
+    &__format
+        &-text
+            font-family: FFGoodPro-Medium
+        &-indicate
+            &::before
+                content: ""
+                display: inline-block
+                border-radius: 50%
+                background: #3ACF22
+                width: 8px
+                height: 8px
+                margin-right: 6px
+    &__experience
+        &-date
+            font-family: FFGoodPro-Medium
+    &__graduates
+        &-amount
+            font-family: FFGoodPro-Medium
+    &__year
+        &-amount
+            font-family: FFGoodPro-Medium
+    &__button_yel
+        border-radius: 6px
+        width: 315px
+        height: 53px
+        margin: 10px auto 0 auto

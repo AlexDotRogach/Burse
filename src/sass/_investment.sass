@@ -1,0 +1,62 @@
+.investment 
+    &__achievements
+        display: flex
+        justify-content: space-between
+        padding: 50px 53px 40px 25px
+
+        text-align: center
+        color: #0C0C0C
+        font-size: 16px
+        font-family: FFGoodPro-Light
+        &-item
+            @include flexColumn
+            align-items: center
+            svg
+                width: 65px
+                height: 65px
+            span
+                padding-top: 12px
+    &__title
+        text-align: center
+        color: #272727
+        font-family: FFGoodPro-Medium
+    &__questions 
+        padding: 30px 0 35px -5px
+    &__questions
+        &-item
+            display: inline-block
+            background: #F4F4FD
+            border: 1px solid #C5D2DE
+            border-radius: 27px
+            padding: 7px 15px
+            margin-top: 15px
+            margin-left: 10px
+            color: #272727
+            font-size: 16px
+            font-family: FFGoodPro-Light
+            &:hover
+                cursor: pointer
+        &-item_active
+            background: #658AE5
+            color: #FFFFFF
+    &__text
+        padding: 30px 10px 60px 10px
+        span
+            color: #262626
+            font-size: 16px
+            font-family: FFGoodPro-Light
+
+
+#inves-achiev-study
+    fill: #718FDB
+    g 
+        fill: #DAE9F5
+
+#inves-achiev-fire
+    fill: #DAE9F5
+    g 
+        &:nth-child(2) 
+            fill: #718FDB
+
+            
+        
