@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="header__logo-wrap">
+    <div class="header__logo-img">
+      <div class="header__logo-svg"></div>
+      <!-- <svg viewBox="0 0 46 22" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="./sprites/sprite-simple.svg#header-logo"></use>
+      </svg> -->
+    </div>
+    <div class="header__logo-text">@@header__logo-text</div>
+  </div>
+
+  <div class="header__phone">
+    <svg class="header__phone-svg">
+      <use xlink:href="./sprites/sprite-simple.svg#header-phone"></use>
+    </svg>
+  </div>
+
+  <div class="header__menu-wrap">
+    <input id="header__menu-toggle" type="checkbox" />
+    <label class="header__menu-button-container" for="header__menu-toggle">
+      <div class="header__menu-button"></div>
+    </label>
+    <ul class="header__menu">
+      @@loop('header/_header__menu.html', [ { "item": "Навчання"}, { "item": "Про нас"}, { "item": "Новини"}, { "item": "Статті"}, { "item": "Відгуки"}, { "item": "Контакти"} ])
+    </ul>
+  </div>
+</header>
