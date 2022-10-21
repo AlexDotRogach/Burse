@@ -1,28 +1,74 @@
 .consultation-write
-    background: #FEEA81
-    border-radius: 8px
-    margin: 0 10px
-    padding: 20px 0
-    color: #262626
-    position: relative
+    @include mainBackground
+    .container
+        @media (min-width: 1200px)
+            width: 900px
+            margin: 0 auto 
+    &__wrap
+        @include flexColumn
+        align-items: start
+        background: #FEEA81
+        border-radius: 8px
+
+        position: relative
+        width: 355px
+        margin: 0 auto
+        padding: 20px 0 20px 25px
+
+        color: #262626
+
+        @media (min-width: 500px)
+             width: 450px
+        @media (min-width: 900px)
+            overflow: hidden
+            width: 80%
+            height: 120px
+        @media (min-width: 1300px)
+            width: 100%
     &__title
         font-size: 19px
         font-family: FFGoodPro-Medium
-        margin-left: 25px
     &__text
         font-family: FFGoodPro-Light
-        font-size: 14px
-        margin-left: 25px
-        letter-spacing: -0.6px
+        font-size: 13px
+    &__title, &__text
+        @media (min-width: 1300px)
+            margin-left: 266px
     &__btn
         background: #FFFFFF
         border-radius: 6px
-        padding: 10px 20px
-        margin: 10px 0 0 25px
+        width: 131px
+        height: 43px
+        margin-top: 20px
         &:hover
             background: #8a8a8ab3
             color: black
+        @media (min-width: 900px)
+            position: absolute
+            right: 40px
+            z-index: 1
+            width: 255px
+            height: 53px
+            font-family: FFGoodPro-Light
     &__img
         position: absolute
         bottom: 0
-        right: -11px
+        right: 0
+        @media (min-width: 900px)
+            display: none
+        &-desk
+            display: none
+            position: absolute
+            bottom: 0
+            right: 0
+            transform: translateX(-100px)
+            @media (min-width: 900px)
+                display: block
+            @media (min-width: 1100px)
+                transform: translateX(-200px)
+            @media (min-width: 1100px)
+                transform: translateX(-250px)
+            @media (min-width: 1300px)
+                left: 0
+                transform: translateX(0)
+                

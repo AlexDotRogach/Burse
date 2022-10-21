@@ -1,0 +1,105 @@
+.education
+    .container
+        @media (min-width: 1200px)
+            width: 900px
+            margin: 0 auto 
+    @include mainBackground 
+    &__title
+        text-align: center
+        padding-top: 60px
+        font-family: FFGoodPro-Medium
+    &__course
+        color: #1B1B1B
+        font-size: 14px
+        width: 355px
+        margin: 0 auto
+        margin-top: 50px
+        background: linear-gradient(3.09deg, #FFFFFF 9.74%, #F8F7FD 84.33%)
+        backdrop-filter: blur(6.5px)
+        &:first-child
+            margin-top: 30px
+        @media (min-width: 900px)
+            margin-top: 20px
+            &:first-child
+                margin-top: 20px
+        &-wrap
+            @media (min-width: 900px)
+                display: flex
+                justify-content: space-between
+        &-header
+            display: flex
+            background: #F6ECC8
+            border-radius: 16px 16px 0 0
+        &-title
+            @include flexColumn
+            align-items: start
+            padding: 20px 0 0 25px
+        &-text
+            font-family: FFGoodPro-Light
+        &-vip
+            margin-top: 6px
+            text-align: left
+            font-size: 21px
+            font-family: FFGoodPro-Medium
+            font-weight: bolder
+        &-during
+            margin-top: 15px
+            font-family: FFGoodPro-Medium
+        &-time
+            font-family: FFGoodPro-Light
+            margin-left: 5px
+        &-img-wrap
+            width: 157px
+            height: 140px
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            
+        // after header
+        &-main
+            @include backCard
+        &-info
+            color: #262626
+            font-family: FFGoodPro-Light
+            font-size: 16px
+            text-align: justify
+            padding: 21px 15px 15px 15px
+        &-separator
+            background: #F2F5FC
+            width: 295px
+            height: 1px
+            margin: 0 auto
+        // price
+        &-price
+            display: flex
+            &-wrap
+                @include flexSpacBet
+                padding: 15px 15px 0 15px
+                margin: 0 auto
+                color: #262626
+                font-size: 16px
+            &-text
+                font-family: FFGoodPro-Medium
+            &-disc
+                text-decoration: line-through red
+                color: #D25A5A
+                padding-top: 2px
+                padding-right: 13px
+            &-value
+                font-size: 20px
+                font-family: FFGoodPro-Medium
+        &-wrap-btn
+            display: flex
+            justify-content: center
+            padding: 15px 0 20px 0
+        &-btn
+            border-radius: 6px
+            width: 295px
+            height: 53px
+            color: #323232
+            font-size: 16px
+
+
+
+

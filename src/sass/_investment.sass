@@ -1,4 +1,8 @@
 .investment 
+    .container
+        @media (min-width: 1200px)
+            width: 900px
+            margin: 0 auto 
     &__achievements
         display: flex
         justify-content: space-between
@@ -8,6 +12,22 @@
         color: #0C0C0C
         font-size: 16px
         font-family: FFGoodPro-Light
+        @media (min-width: 450px) 
+            width: 400px
+            margin: 0 auto
+            padding: 30px 20px
+        @media (min-width: 900px)
+            position: relative
+            width: 700px 
+            height: 98px
+            background: #FFFFFF
+            box-shadow: -9px 9px 54px rgba(74, 85, 126, 0.1)
+            border-radius: 12px
+            margin-top: 5px
+            margin-bottom: 10px
+        @media (min-width: 1200px)
+            top: -50px
+            width: 900px 
         &-item
             @include flexColumn
             align-items: center
@@ -16,6 +36,11 @@
                 height: 65px
             span
                 padding-top: 12px
+                @media (min-width: 900px)
+                    text-align: left
+            @media (min-width: 900px)
+                flex-direction: row
+                font-size: 8px
     &__title
         text-align: center
         color: #272727
@@ -46,6 +71,10 @@
             font-size: 16px
             font-family: FFGoodPro-Light
 
+.desk 
+    display: none
+    @media (min-width: 900px)
+       display: flex  
 
 #inves-achiev-study
     fill: #718FDB
@@ -58,5 +87,16 @@
         &:nth-child(2) 
             fill: #718FDB
 
+#inves-achiev-country
+    fill: #718FDB
+    g
+        &:nth-child(2) 
+            fill: #DAE9F5
+
+#inves-achiev-chat
+    fill: #DAE9F5
+    g 
+        &:nth-child(2) 
+            fill: #718FDB
             
         

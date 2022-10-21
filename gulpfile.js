@@ -36,7 +36,7 @@ gulp.task('server', function () {
 
 gulp.task('watch', function () {
   gulp.watch('src/sass/**/*.+(scss|sass|css)', gulp.parallel('styles'))
-  gulp.watch('src/js/*.js', gulp.parallel('compress'))
+  gulp.watch('src/js/**/*.js', gulp.parallel('compress'))
   gulp.watch('src/**/*.html').on('change', gulp.parallel('html'))
   gulp.watch('src/img/*').on('all', gulp.parallel('images'))
   gulp.watch('src/svg/svgSprite/*').on('all', gulp.parallel('svgSprite'))

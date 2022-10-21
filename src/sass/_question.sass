@@ -1,6 +1,9 @@
 .question
-    background: linear-gradient(3.09deg, #FFFFFF 9.74%, #F8F7FD 84.33%)
-    backdrop-filter: blur(6.5px)
+    .container
+        @media (min-width: 1200px)
+            width: 900px
+            margin: 0 auto 
+    @include mainBackground
     padding: 0 10px 0 10px
     &__title
         padding-top: 50px
@@ -13,11 +16,11 @@
         width: 15px
         height: 15px
         fill: #A0C0D9
-
     &__control
         @include flexSpacBet
-        width: 100px
-        margin: 40px auto
+        padding: 40px
+        width: 170px
+        margin: 0 auto
         &-item
             border-radius: 50%
             background: #D4DFF8
@@ -30,7 +33,7 @@
 // slider
 .card
     display: grid
-    grid-template: 112px 54px repeat(4, 28px) 70px/ 1fr 1fr
+    grid-template: 112px 54px repeat(4, 28px) 70px / 1fr 1fr
     row-gap: 15px
     background: #FFFFFF
     box-shadow: -9px 9px 54px rgba(74, 85, 126, 0.1)
@@ -58,7 +61,7 @@
             color: #262626
             margin-top: 15px
         &-achiev
-            background: url("../img/achiev.png") no-repeat
+            background: url("./img/achiev.png") no-repeat
             width: 20px
             height: 20px
         &-text
@@ -107,3 +110,118 @@
         width: 315px
         height: 53px
         margin: 10px auto 0 auto
+
+//desktop card
+
+.card-desk
+    display: flex
+    background: #FFFFFF
+    box-shadow: -9px 9px 54px rgba(74, 85, 126, 0.1)
+    border-radius: 18px
+    width: 80%
+    height: 360px
+    margin: 0 auto
+    position: relative
+
+    &__img-wrap
+        width: 195px
+        height: 195px
+        border: 14px solid #FAFAFD
+        border-radius: 50%
+        box-shadow: inset -1px -2px 23px rgba(99, 106, 126, 0.1)
+        transform: translate(-8.5px, -5px)
+        position: absolute
+        top: 20px
+        left: -95px
+    &__img-wrap img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__info
+        @include flexColumn
+        margin-left: 115px
+        text-align: left
+        margin-top: 30px
+        flex-basis: 43%
+    &__title
+        color: #262626
+        &-name
+            font-size: 22px
+            font-family: FFGoodPro-Medium
+        &-type
+            display: flex
+            margin-top: 10px
+        &-text-type
+            font-size: 16px
+            font-family: FFGoodPro-Regular
+        &-achiev
+            background: url("./img/achiev.png") no-repeat
+            width: 20px
+            height: 20px
+        &-text
+            font-family: FFGoodPro-Light
+    &__info-text
+        font-family: FFGoodPro-Light
+        color: #464646
+        font-size: 16px
+        margin-top: 15px
+    &__comment
+        &-wrap
+            max-width: 350px
+            background: #F2F5FC
+            border-radius: 6px
+            display: flex
+            justify-content: space-between
+            padding: 14px 40px 14px 20px
+            margin-top: 25px
+        &-img svg
+            width: 45px
+            height: 45px
+        &-text
+            font-style: italic
+            font-family: FFGoodPro-Light
+            font-size: 14px
+            color: #262626
+            margin-left: 15px
+            text-align: justify
+    &__points
+        margin-top: 30px
+        flex-basis: 43%
+    &__format, &__experience, &__graduates, &__year
+        @include flexSpacBet
+        padding: 0 20px
+        font-size: 16px
+    &__experience, &__graduates, &__year
+        font-family: FFGoodPro-Light
+        margin-top: 15px
+        svg
+            margin-right: 8px
+    &__format
+        &-text
+            font-family: FFGoodPro-Medium
+        &-indicate
+            &::before
+                content: ""
+                display: inline-block
+                border-radius: 50%
+                background: #3ACF22
+                width: 8px
+                height: 8px
+                margin-right: 6px
+    &__experience
+        &-date
+            font-family: FFGoodPro-Medium
+    &__graduates
+        &-amount
+            font-family: FFGoodPro-Medium
+    &__year
+        &-amount
+            font-family: FFGoodPro-Medium
+    &__button_yel
+        display: block
+        border-radius: 6px
+        max-width: 252px
+        height: 53px
+        margin: 40px auto 0 auto
+        font-size: 14px
+        padding: 0 15px

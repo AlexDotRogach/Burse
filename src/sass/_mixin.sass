@@ -3,22 +3,33 @@
     @font-face 
         font-family: $font_name 
         font-display: swap
-        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2") 
+        src: url("./fonts/#{$file_name}.woff") format("woff"), url("./fonts/#{$file_name}.woff2") format("woff2") 
         font-weight: #{$weight} 
         font-style: #{$style}
 // your code:
 @mixin flexColumn
     display: flex
     flex-direction: column
+    
 @mixin posLeft
     position: relative
     left: 50%
     transform: translateX(-50%)
+
 @mixin posCenter
     position: relative
     left: 50%
     right: 50%
     transform: translate(-50%, -50%)
+
 @mixin flexSpacBet
     display: flex
     justify-content: space-between
+
+@mixin backCard 
+    background: #FFFFFF
+    box-shadow: 0px 4px 31px rgba(91, 91, 91, 0.17)
+
+@mixin mainBackground
+    background: #F8F7FD
+    backdrop-filter: blur(6.5px)

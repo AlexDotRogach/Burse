@@ -2,7 +2,10 @@ export default function investQuestion() {
   const refs = {
     investQuestion: document.querySelector('.investment__questions'),
   }
-  const messages = {
+
+  const width = screen.width
+
+  const messagesText = {
     mobile: [
       'Хто такі бики, ведмеді, вівці та хом’яки?',
       'Які підводні камені на фінансових ринках?',
@@ -16,15 +19,26 @@ export default function investQuestion() {
       'Що таке статегії та тактики торгівлі?',
       'Що робити новачку?',
       'Як торгують роботи?',
+      "Як купити акції McDonald's, Google, Apple?",
+      'Що впливає на курс біткоїна?',
+      'Як торгувати криптовалюту?',
+      'Чому профі заробляють на падіннях акцій?',
+      'Як обрати платформу для трейдингу?',
+      "Хто такі 'бики, ведмеді' та 'хом’яки'?",
+      'Чи можливо застрахувати інвестиції?',
     ],
   }
+
+  let currentText = messagesText.mobile
+
+  if (width >= 1200) currentText = messagesText.desktop
 
   function createElements(arr) {
     return arr.map(createHtml).join('')
   }
 
   function createHtml(elem) {
-    if (elem === messages.mobile[0]) {
+    if (elem === currentText[0]) {
       return `
         <div class="investment__questions-item investment__questions-item_active">
             ${elem}
@@ -38,7 +52,7 @@ export default function investQuestion() {
     `
   }
 
-  refs.investQuestion.insertAdjacentHTML('beforeend', createElements(messages.mobile))
+  refs.investQuestion.insertAdjacentHTML('beforeend', createElements(currentText))
 
   // change state on click
   const active = 'investment__questions-item_active'

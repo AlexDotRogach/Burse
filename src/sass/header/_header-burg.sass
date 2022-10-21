@@ -1,20 +1,31 @@
 .header__menu-wrap
   height: 17px
+  margin-right: 5px
+  @media (min-width: 700px)
+    height: auto
 
 .header__menu 
   display: flex
-  flex-direction: row
   list-style-type: none
   margin: 0
   padding: 0
   z-index: 3
-
+  @media (min-width: 700px)
+    font-size: 12px
+    height: 60px
+  @media (min-width: 1200px)
+    font-size: 14px
+  @media (min-width: 1600px)
+    font-size: 18px
 .header__menu > li 
   margin: 0 1rem
   overflow: hidden
   cursor: pointer
   &:hover
-    background: #878787cc
+    border-bottom: 4px solid #658AE5
+  @media (min-width: 700px)
+    height: 100%
+    line-height: 60px
 
 .header__menu-button-container 
   display: none
