@@ -76,7 +76,7 @@ gulp.task('compress', function () {
     .src('src/js/index.js')
     .pipe(
       webpack({
-        mode: 'development', // can change on production
+        mode: 'production', // can change on production development
         output: {
           filename: 'min.js',
         },

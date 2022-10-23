@@ -1,10 +1,10 @@
 .question
     .container
-        @media (min-width: 1200px)
-            width: 900px
-            margin: 0 auto 
+        position: relative
     @include mainBackground
     padding: 0 10px 0 10px
+    @media (min-width: 1200px)
+        background: url("./img/question-back(1200).png") no-repeat
     &__title
         padding-top: 50px
         padding-bottom: 37px
@@ -12,6 +12,8 @@
         font-family: FFGoodPro-Medium
         font-size: 27px
         color: #272727
+        @media (min-width: 1600px)
+            font-size: 40px
     svg
         width: 15px
         height: 15px
@@ -21,6 +23,9 @@
         padding: 40px
         width: 170px
         margin: 0 auto
+        @media (min-width: 1200px)
+            width: 900px
+            padding: 0
         &-item
             border-radius: 50%
             background: #D4DFF8
@@ -28,8 +33,57 @@
             height: 10px
             &:hover
                 cursor: pointer
+            @media (min-width: 1200px)
+                border-radius: 0
+                width: 128px
+                height: auto
+                background: none
+                margin-top: 60px
+                margin-bottom: 70px
+                color: #262626
+
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+        &-img
+            opacity: 0.6
+        &-name
+            display: inline-block
+            margin-top: 30px
+            font-family: FFGoodPro-Medium
+            font-size: 18px
+        &-city
+            display: inline-block
+            margin-top: 10px
+            font-family: FFGoodPro-Light
+            font-size: 16px
         &-item_active
             background: #658AE5
+            @media (min-width: 1200px)
+                background: none
+                .question__control-img
+                    opacity: 1
+    // arrow
+    &__arrow-right, &__arrow-left
+        position: absolute
+        width: 40px !important
+        height: 40px !important
+        fill: none !important
+        stroke:#9FA4C0
+        stroke-width: 1px
+        top: 30%
+        display: none
+        z-index: 1
+        &:hover
+            cursor: pointer
+            fill: rgba(0,0,0,.1) !important
+        @media (min-width: 1200px)
+            display: block
+    &__arrow-right
+        right: 0
+    &__arrow-left
+        left: 0
 // slider
 .card
     display: grid
@@ -118,31 +172,49 @@
     background: #FFFFFF
     box-shadow: -9px 9px 54px rgba(74, 85, 126, 0.1)
     border-radius: 18px
-    width: 80%
+    width: 70%
     height: 360px
     margin: 0 auto
     position: relative
-
+    @media (min-width: 1600px)
+        width: 65%
+    @media (min-width: 1800px)
+        width: 990px
     &__img-wrap
-        width: 195px
-        height: 195px
+        width: 145px
+        height: 145px
         border: 14px solid #FAFAFD
         border-radius: 50%
         box-shadow: inset -1px -2px 23px rgba(99, 106, 126, 0.1)
         transform: translate(-8.5px, -5px)
         position: absolute
         top: 20px
-        left: -95px
+        left: -75px
+        @media (min-width: 1200px)
+            width: 195px
+            height: 195px
+        @media (min-width: 1600px)
+            width: 295px
+            height: 295px
+            left: -145px
+        @media (min-width: 1800px)
+            left: -95px
     &__img-wrap img 
         width: 100%
         height: 100%
         object-fit: cover
     &__info
         @include flexColumn
-        margin-left: 115px
         text-align: left
         margin-top: 30px
+        margin-left: 70px
         flex-basis: 43%
+        @media (min-width: 1200px)
+            margin-left: 120px
+        @media (min-width: 1600px)
+            margin-left: 170px
+        @media (min-width: 1800px)
+            margin-left: 210px
     &__title
         color: #262626
         &-name
@@ -183,10 +255,11 @@
             font-size: 14px
             color: #262626
             margin-left: 15px
-            text-align: justify
+            text-align: left
+        @media (min-width: 1400px)
+            
     &__points
         margin-top: 30px
-        flex-basis: 43%
     &__format, &__experience, &__graduates, &__year
         @include flexSpacBet
         padding: 0 20px
@@ -209,8 +282,13 @@
                 height: 8px
                 margin-right: 6px
     &__experience
+        &-text
+            text-align: left
         &-date
             font-family: FFGoodPro-Medium
+            text-align: right
+            @media (min-width: 1400px)
+                margin-left: 10px
     &__graduates
         &-amount
             font-family: FFGoodPro-Medium

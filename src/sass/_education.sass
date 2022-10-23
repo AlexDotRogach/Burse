@@ -1,13 +1,17 @@
 .education
-    .container
-        @media (min-width: 1200px)
-            width: 900px
-            margin: 0 auto 
     @include mainBackground 
+    @media (min-width: 1200px)
+        background: white
     &__title
         text-align: center
         padding-top: 60px
         font-family: FFGoodPro-Medium
+        @media (min-width: 1200px)
+            padding-top: 0
+        @media (min-width: 1200px)
+            font-size: 30px
+        @media (min-width: 1600px)
+            font-size: 40px
     &__course
         color: #1B1B1B
         font-size: 14px
@@ -16,6 +20,9 @@
         margin-top: 50px
         background: linear-gradient(3.09deg, #FFFFFF 9.74%, #F8F7FD 84.33%)
         backdrop-filter: blur(6.5px)
+        @media (min-width: 1600px)
+            width: 613px
+            margin: 0
         &:first-child
             margin-top: 30px
         @media (min-width: 900px)
@@ -30,10 +37,14 @@
             display: flex
             background: #F6ECC8
             border-radius: 16px 16px 0 0
+            @media (min-width: 1600px)
+                position: relative
         &-title
             @include flexColumn
             align-items: start
             padding: 20px 0 0 25px
+            @media (min-width: 1600px)
+                font-size: 25px
         &-text
             font-family: FFGoodPro-Light
         &-vip
@@ -42,15 +53,26 @@
             font-size: 21px
             font-family: FFGoodPro-Medium
             font-weight: bolder
+            @media (min-width: 1600px)
+                font-size: 32px
         &-during
             margin-top: 15px
             font-family: FFGoodPro-Medium
+            @media (min-width: 1600px)
+                font-size: 16px
+                transform: translateY(70px)
         &-time
             font-family: FFGoodPro-Light
             margin-left: 5px
         &-img-wrap
             width: 157px
             height: 140px
+            @media (min-width: 1600px)
+                width: 280px
+                height: 270px
+                position: absolute
+                right: 0
+                top: -20px
         &-img
             width: 100%
             height: 100%
@@ -59,6 +81,8 @@
         // after header
         &-main
             @include backCard
+            @media (min-width: 1600px)
+                padding: 80px 40px 0 10px
         &-info
             color: #262626
             font-family: FFGoodPro-Light

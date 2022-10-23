@@ -1,11 +1,24 @@
 <article class="question">
   <div class="container">
+    <svg class="question__arrow-left">
+      <use xlink:href="./sprites/sprite-simple.svg#question-arrow-left"></use>
+    </svg>
+    <svg class="question__arrow-right">
+      <use xlink:href="./sprites/sprite-simple.svg#question-arrow-right"></use>
+    </svg>
+    
     <h2 class="question__title">@@question__title</h2>
 
     <div class="question__slider-wrap">
-    <div class="question__slider">
-    
+      <div class="question__slider"></div>
+      <div class="question__control">
+      </div>
     </div>
-    <div class="question__control"></div>
+
+    @@include("_consultation-write.html", {
+      "consultation-write__title": "Запишись на консультацію сьогодні",
+      "consultation-write__text": "та отримай <b>БЕЗКОШТОВНО 2 ЗАНЯТТЯ</b>",
+      "consultation-write__btn": "Консультація"
+    })
   </div>
 </article>

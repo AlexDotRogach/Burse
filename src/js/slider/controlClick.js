@@ -11,13 +11,26 @@ export default function controlClick({ parent, queControl } = {}) {
     }
   })
 
-  queControl.addEventListener('click', e => {
-    if (e.target.classList.contains('question__control-item')) {
-      controls.forEach(item => item.classList.remove('question__control-item_active'))
-      e.target.classList.add('question__control-item_active')
-      controlCard(cards, e.target, display)
-    }
-  })
+  queControl.addEventListener('click', e => clickItem(e.target, { controls, cards, display }))
+}
+
+function clickItem(target, { controls, cards, display }) {
+  if (
+    !(
+      target.classList.contains('question__control-item') ||
+      target?.parentElement.classList.contains('question__control-item')
+    )
+  )
+    return
+
+  const element = target.classList.contains('question__control-item')
+    ? target
+    : target.parentElement
+
+  controls.forEach(item => item.classList.remove('question__control-item_active'))
+
+  element.classList.add('question__control-item_active')
+  controlCard(cards, element, display)
 }
 
 function controlCard(cards, elem, display) {

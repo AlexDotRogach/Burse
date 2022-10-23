@@ -1,9 +1,6 @@
 .consultation-write
-    @include mainBackground
-    .container
-        @media (min-width: 1200px)
-            width: 900px
-            margin: 0 auto 
+    @media (min-width: 1200px)
+        margin-bottom: 60px
     &__wrap
         @include flexColumn
         align-items: start
@@ -28,9 +25,13 @@
     &__title
         font-size: 19px
         font-family: FFGoodPro-Medium
+        @media (min-width: 1600px)
+            font-size: 24px
     &__text
         font-family: FFGoodPro-Light
         font-size: 13px
+        @media (min-width: 1600px)
+            font-size: 18px
     &__title, &__text
         @media (min-width: 1300px)
             margin-left: 266px
@@ -68,6 +69,8 @@
                 transform: translateX(-200px)
             @media (min-width: 1100px)
                 transform: translateX(-250px)
+            @media (min-width: 1200px)
+                transform: translateX(-50px)
             @media (min-width: 1300px)
                 left: 0
                 transform: translateX(0)
